@@ -9,7 +9,6 @@ pub fn hash(b64: Binary) -> String {
         tlsh::Version::Version4,
      );
      builder.update(&b64);
-     builder.build().unwrap();
      let tlsh1 = builder.build().unwrap();
      tlsh1.hash()
 }
